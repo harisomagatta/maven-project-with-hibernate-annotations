@@ -80,7 +80,7 @@ public class ManageEmployee {
 			employee.setSalary(salary);
 			employee.setMiddleName(mname);
 			employee.setDeptId(deptId);
-			
+			employeeID = (Integer) session.save(employee);
 			tx.commit();
 		} catch (HibernateException e) {
 			if (tx != null)
